@@ -3,6 +3,7 @@ import morgan from "morgan";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import router from "./routes/router.js";
+import {} from './database.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
