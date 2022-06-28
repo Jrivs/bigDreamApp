@@ -1,17 +1,19 @@
+import 'dotenv/config'
+
 import express from "express";
 import morgan from "morgan";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import router from "./routes/router.js";
-import {} from './database.js'
+import './database.js'
+
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 
 //Settings
-app.set('port', 3000);
-
+app.set('port', process.env.PORT || 3000);
 
 //Middleware
 app.use(morgan('dev'))
